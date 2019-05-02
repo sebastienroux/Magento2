@@ -30,7 +30,7 @@ Install [Docker](https://docs.docker.com/engine/installation/linux/docker-ce/ubu
 Execute in your terminal, change the *MYMAGENTO2* to use the name of your project:
 
 ```
-curl -s https://raw.githubusercontent.com/clean-docker/Magento2/master/init | bash -s MYMAGENTO2 clone
+curl -s https://raw.githubusercontent.com/sebastienroux/Magento2/master/init | bash -s MYMAGENTO2 clone
 ```
 
 If you want to install the Magento 2, use like that:
@@ -42,7 +42,7 @@ rm index.php
 install-magento2
 ```
 
-You can specify the version that want install (e.g. `install-magento2 2.2`).
+You can specify the version that want install (e.g. `install-magento2 2.3.1`).
 
 ### Panels
 
