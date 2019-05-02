@@ -11,23 +11,21 @@ chmod u+w -R ./var ./vendor ./pub/static ./pub/media ./app/etc \
     --db-name=magento \
     --db-user=magento \
     --db-password=magento \
-    --admin-firstname=Magento \
-    --admin-lastname=Commerce \
-    --admin-email=user@example.com \
+    --admin-firstname= Christian \
+    --admin-lastname=Plantin \
+    --admin-email=sebastien.roux.dev@gmail.com \
     --admin-user=admin \
-    --admin-password=admin123 \
-    --language=en_US \
-    --currency=USD \
-    --timezone=America/Chicago \
+    --admin-password=plantin \
+    --language=fr_FR \
+    --currency=EUR \
+    --timezone=Europe/Paris \
     --use-rewrites=1 \
     --backend-frontname=admin \
-    --use-sample-data \
 && mv ./app/etc/env.php ./app/etc/env.original.php;
 cp -rv /var/www/env.sample.php ./app/etc/env.php;
 n98 cron:install;
 php -f ./bin/magento indexer:set-mode schedule;
 cp ~/.composer/auth.json var/composer_home/auth.json \
-&& php -f ./bin/magento sampledata:deploy \
 && php -f ./bin/magento setup:upgrade \
 && php -f ./bin/magento indexer:reindex \
 && php -f ./bin/magento cache:flush;
@@ -42,6 +40,6 @@ php -f ./bin/magento deploy:mode:set production \
 
       🌎 Admin: http://localhost/admin
       👤 User: admin
-      🔑 Password: admin123
+      🔑 Password: plantin
 
 ===================== 🚀 Done 🚀 ==================="
